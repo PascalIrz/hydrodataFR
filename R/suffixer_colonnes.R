@@ -13,14 +13,15 @@
 #' \dontrun{
 #' new_names <- suffixer_colonnes(old_names)
 #' }
-suffixer_colonnes <- function(noms_colonnes, suffixes = c("est", "min", "max"))
+suffixer_colonnes <-
+  function(noms_colonnes,
+           suffixes = c("est", "min", "max"))
 
-{
+  {
+    map(.x = noms_colonnes,
+        .f = paste,
+        suffixes) %>%
+      unlist()
 
-  map(.x = noms_colonnes,
-      .f = paste,
-      suffixes) %>%
-    unlist()
 
-
-}
+  }

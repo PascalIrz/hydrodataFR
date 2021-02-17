@@ -9,14 +9,14 @@
 #'
 #' @examples
 #' \dontrun{
-#' dfs_sta <- parser_nsta(liste = liste, sta_ids = c("J0621610", "J3403010"))
+#' dfs_sta <- parser_nsta(liste = liste,
+#' sta_ids = c("J0621610", "J3403010"))
 #' }
 parser_nsta <- function(liste, sta_ids)
 
 {
-
-sorties <- map(.x = sta_ids,
-               .f = parser_1sta)
+  sorties <- map(.x = sta_ids,
+                 .f = parser_1sta)
 
 
 }

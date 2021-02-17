@@ -19,21 +19,25 @@
 #                 i = 1)
 #' }
 
-extraire_1_sta <- function(syntheses, indexes_debut, indexes_fin, i, nom_liste = "liste") {
+extraire_1_sta <-
+  function(syntheses,
+           indexes_debut,
+           indexes_fin,
+           i,
+           nom_liste = "liste") {
+    sta <- list()
 
-  sta <- list()
+    sta_data <- syntheses[indexes_debut[i]:indexes_fin[i]]
 
-  sta_data <- syntheses[indexes_debut[i]:indexes_fin[i]]
+    sta[[1]] <- sta_data
 
-  sta[[1]] <- sta_data
+    sta_id <- sta_data[[2]] %>%
+      strsplit(";") %>%
+      .[[1]] %>%
+      .[[1]]
 
-  sta_id <- sta_data[[2]] %>%
-    strsplit(";") %>%
-    .[[1]] %>%
-    .[[1]]
+    sta[[2]] <- sta_id
 
-  sta[[2]] <- sta_id
+    sta
 
-  sta
-
-}
+  }

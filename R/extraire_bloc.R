@@ -16,7 +16,6 @@
 #' liste <- scinder_syntheses(syntheses = readLines("raw_data/export.csv"))
 #' }
 extraire_bloc <- function(synthese, pattern_debut, nb_lignes) {
-
   ligne_debut <- synthese %>%
     stringi::stri_detect_fixed(pattern = pattern_debut) %>%
     which()
