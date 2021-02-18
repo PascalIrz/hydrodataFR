@@ -7,9 +7,9 @@
 #'     (cas où les intervalles de confiance sont indiqués => suffixes est, min et max).
 #'
 #' @return Le dataframe mis en forme.
-#' @export
+#' @noRd
 #'
-#' @importFrom dplyr slice mutate_all
+#' @importFrom dplyr slice mutate_all n select
 #' @importFrom purrr set_names discard
 #' @importFrom magrittr set_rownames
 #'

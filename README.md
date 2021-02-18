@@ -1,3 +1,3 @@
 # hydrodataFR
-Téléchargement et mise en forme des données de la base Hydro.
+Téléchargement et mise en forme des données de la banque Hydro.
 

@@ -2,10 +2,10 @@
 #' @param syntheses Objet texte simple (lecture du csv d'export).
 #'
 #' @return Une liste avec ubn objet par station.
-#' @export
+#' @noRd
 #'
 #' @importFrom stringi stri_detect_fixed
-#' @importClassesFrom purrr map
+#' @importFrom purrr map
 #'
 #' @examples
 #' \dontrun{

@@ -3,7 +3,7 @@
 #' @param liste Liste issue de la fonction scinder_syntheses().
 #'
 #' @return La même liste mais dont les objets sont nommés d'après les codes stations.
-#' @export
+#' @noRd
 #'
 #' @importFrom purrr map
 #'

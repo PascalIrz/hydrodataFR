@@ -6,10 +6,10 @@
 #' @param nb_lignes Numérique. Nombre de lignes du tableau (dont les noms des colonnes).
 #'
 #' @return Un dataframe contenant les données.
-#' @export
+#' @noRd
 #'
 #' @importFrom stringi stri_detect_fixed
-#' @importClassesFrom stringr str_split
+#' @importFrom stringr str_split
 #'
 #' @examples
 #' \dontrun{

@@ -4,7 +4,7 @@
 #' @param sta_id Caractère. Identifiant de la station, par exemple "J0621610".
 #'
 #' @return Une liste avec un dataframe par tableau de l'export.
-#' @export
+#' @noRd
 #'
 #' @importFrom dplyr pull
 #'
@@ -177,7 +177,7 @@ parser_1sta <- function(liste, sta_id) {
                       pattern_debut = "Débits classés",
                       nb_lignes = nb_lignes)
 
-  noms_colonnes <- paste("f_", dc[1, ])
+  noms_colonnes <- paste0("f_", dc[1, ])
 
   noms_lignes <- 'Débit (m3/s)'
 
@@ -192,6 +192,8 @@ parser_1sta <- function(liste, sta_id) {
   # assemblage par station
   # -------------------------------------------------------------
   sortie <- list(em, mi, mm, be, be2, cr, cr2, dc)
+
+  names(sortie) <- c("em", "mi", "mm", "be", "be2", "cr", "cr2", "dc")
 
   sortie
 

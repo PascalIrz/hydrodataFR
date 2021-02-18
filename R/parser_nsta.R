@@ -4,7 +4,7 @@
 #' @param sta_ids Caractère. Vacteur des identifiants des stations.
 #'
 #' @return Une liste de liste structurée.
-#' @export
+#' @noRd
 #' @importFrom purrr map
 #'
 #' @examples
@@ -16,7 +16,11 @@ parser_nsta <- function(liste, sta_ids)
 
 {
   sorties <- map(.x = sta_ids,
-                 .f = parser_1sta)
+                 .f = parser_1sta,
+                 liste = liste)
 
 
 }
+
+
+

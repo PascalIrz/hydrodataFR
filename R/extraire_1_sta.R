@@ -9,7 +9,9 @@
 #' @param nom_liste Nom de la liste de sortie.
 #'
 #' @return Une liste.
-#' @export
+#' @noRd
+#'
+#' @importFrom magrittr '%>%'
 #'
 #' @examples
 #' \dontrun{

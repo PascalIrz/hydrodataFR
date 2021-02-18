@@ -5,7 +5,7 @@
 #'
 #' @return Un nouveau vecteur contenant des noms de colonnes. Par défaut il est 3
 #'     fois plus long quye le premier.
-#' @export
+#' @noRd
 #'
 #' @importFrom purrr map
 #'
