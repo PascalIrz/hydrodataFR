@@ -6,3 +6,5 @@ A terme il offrira des fonctionnalités pour accéder simplement aux données su
 - Les cotes et débits en temps réel, via l'[API hydrométrie](https://hubeau.eaufrance.fr/page/api-hydrometrie).
 - Les synthèses statistiques par station hydrométrique, via le [portail de la banque HYDRO](http://hydro.eaufrance.fr/).
 - Les observations de l'[Observatoire National des Etiages (ONDE)](https://onde.eaufrance.fr/).
+
+Voire plus ... dont la piézométrie.
