@@ -41,3 +41,4 @@ vignettes/*.pdf
 # Data repositories
 raw_data
 processed_data
+.Rproj.user
