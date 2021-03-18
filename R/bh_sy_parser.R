@@ -11,6 +11,8 @@
 #'     correspondant aux débits mensuels, crues, modules, étiages, etc.
 #' @export
 #'
+#' @importFrom stringi stri_trans_general
+#'
 #' @examples
 #' \dontrun{
 #' syntheses <- bh_sy_parser(fichier = "raw_data/5590_4_synthese.csv")
@@ -18,7 +20,8 @@
 bh_sy_parser <- function(fichier) {
 
   # Lecture du fichier texte d'export des syntheses
-  syntheses <- readLines(con = fichier)
+  syntheses <- readLines(con = fichier) %>%
+    stringi::stri_trans_general(id = "Latin-ASCII") # pour éviter les pbs d'encodage
 
   # Création d'une liste contenant un élément par station et nommé d'après le code station
   syntheses_liste <- scinder_syntheses(syntheses = syntheses) %>%

@@ -68,7 +68,7 @@ parser_1sta <- function(liste, sta_id) {
 
   noms_colonnes <- c("V1", noms_colonnes, "V2")
 
-  noms_lignes <- "Débits (m3/s)"
+  noms_lignes <- "Debits (m3/s)"
 
   mm <- mm %>%
     mef_df(
@@ -174,12 +174,12 @@ parser_1sta <- function(liste, sta_id) {
   # -------------------------------------------------------------
   nb_lignes <- 2
   dc <- extraire_bloc(synthese = ma_synthese,
-                      pattern_debut = "Débits classés",
+                      pattern_debut = "Debits classes",
                       nb_lignes = nb_lignes)
 
   noms_colonnes <- paste0("f_", dc[1, ])
 
-  noms_lignes <- 'Débit (m3/s)'
+  noms_lignes <- 'Debit (m3/s)'
 
   dc <- dc %>%
     mef_df(
