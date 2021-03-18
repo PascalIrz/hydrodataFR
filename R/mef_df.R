@@ -46,7 +46,7 @@ mef_df <- function(df, noms_colonnes, noms_lignes, suffixer = FALSE)
 
     }
 
-    if('Année' %in% names(df))
+    if(`Année` %in% names(df))
 
     {
 
