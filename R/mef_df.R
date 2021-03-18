@@ -9,7 +9,7 @@
 #' @return Le dataframe mis en forme.
 #' @noRd
 #'
-#' @importFrom dplyr slice mutate_all n select
+#' @importFrom dplyr slice mutate_all n select starts_with
 #' @importFrom purrr set_names discard
 #' @importFrom magrittr set_rownames
 #'
@@ -46,11 +46,13 @@ mef_df <- function(df, noms_colonnes, noms_lignes, suffixer = FALSE)
 
     }
 
-    if(`Année` %in% names(df))
+ #   if('Année' %in% names(df))
+    if(stringr::str_detect(names(df), "^Ann") %>% sum() > 0)
 
     {
 
-      df <- df %>% select(-`Année`)
+     # df <- df %>% select(-`Année`)
+      df <- df %>% select(-(starts_with("Ann")))
 
     }
 

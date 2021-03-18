@@ -1,1 +1,1 @@
-utils::globalVariables(c('.', 'Année', 'V1'))
+utils::globalVariables(c('.', 'V1'))
