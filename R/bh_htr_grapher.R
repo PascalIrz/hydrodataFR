@@ -23,7 +23,6 @@
 #' @importFrom ggplot2 ggplot aes geom_col geom_line scale_x_datetime scale_y_continuous
 #' @importFrom ggplot2 labs geom_hline scale_colour_manual scale_linetype_manual
 #' @importFrom lubridate month
-#' @importFrom stringi stri_escape_unicode
 #'
 #' @examples
 #' \dontrun{
@@ -55,7 +54,7 @@ bh_htr_grapher <- function(debit_sh, synthese_sh, donnees_sh,
     y = c(synthese_sh$mm$`Module (moyenne) est`,
           synthese_sh$be %>% .["Quinquennale seche",] %>% pull(`QMNA (m3/s) est`)),
     type = c("dashed", "solid"),
-    couleur = c("brown", "red")
+    couleur = c(coul_module, coul_QMNA5)
   )
 
   libelle_ma_sh <- donnees_sh %>%
@@ -69,10 +68,9 @@ bh_htr_grapher <- function(debit_sh, synthese_sh, donnees_sh,
     geom_line(col = coul_actuel) +
     scale_x_datetime(date_labels = "%d/%m") + # étiquette axe des dates
     scale_y_continuous(limits = c(0, NA)) +
-    labs(x = "",
-         title = libelle_ma_sh) + # légendes
+    labs(x = "", title = libelle_ma_sh) + # légendes
     geom_hline(data = hline_data, aes(yintercept = y, col = couleur, linetype = type)) +
-    scale_colour_manual(values = c("brown", "red"),
+    scale_colour_manual(values = c(coul_module, coul_QMNA5),
                         labels = c("Module", "QMNA5"),
                         name = "Statistique") +
     scale_linetype_manual(values = c("solid", "dashed"),
